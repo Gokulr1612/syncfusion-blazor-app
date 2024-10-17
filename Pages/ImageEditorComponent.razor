@@ -1,0 +1,18 @@
+﻿@page "/image"
+
+<h3>ImageEditorComponent</h3>
+
+<SfImageEditor @ref="ImageEditor" Height="500">
+    <ImageEditorEvents ShapeChanged="ShapeChangedHandler"></ImageEditorEvents>
+    <ToolbarTemplate> 
+            <SfButton OnClick="Crop">Crop</SfButton>
+        </ToolbarTemplate>
+</SfImageEditor>
+
+@code {
+    SfImageEditor? ImageEditor;
+    private void ShapeChangedHandler(ShapeChangedEventArgs args)
+    {
+        
+    } 
+}

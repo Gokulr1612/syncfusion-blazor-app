@@ -1,0 +1,36 @@
+﻿@inherits LayoutComponentBase
+@using Syncfusion.Blazor.Lists
+
+
+<SfSidebar Width="250px">
+    <ChildContent>
+        <SfListView DataSource="@Data" ID="list">
+            <ListViewFieldSettings TValue="PageURL" Id="Id" Text="Text"></ListViewFieldSettings>
+            <ListViewTemplates TValue="PageURL">
+                <Template>
+                    <a class="e-list-content" href="@((context as PageURL).URL)">@((context as PageURL).Text)</a>
+                </Template>
+            </ListViewTemplates>
+        </SfListView>
+    </ChildContent>
+</SfSidebar>
+
+
+<main> @Body </main>
+
+@code{
+    List<PageURL> Data = new List<PageURL>()
+    {
+        new PageURL{  Text = "Home", URL = "",  },
+        new PageURL{ Text = "Dropdown", URL = "ddl"},
+        new PageURL{ Text = "Accordion", URL = "accordion"},
+        new PageURL{ Text = "Pivot", URL = "pivot"},
+        new PageURL{ Text = "Grid", URL="grid"}
+    };
+
+    class PageURL
+    {
+        public string? URL { get; set; }
+        public string? Text { get; set; }
+    }
+}
