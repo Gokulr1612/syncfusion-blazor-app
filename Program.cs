@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 using Syncfusion.Blazor;
 
-Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("Ngo9BigBOggjHTQxAR8/V1NCaF5cXmZCf1FpRmJGdld5fUVHYVZUTXxaS00DNHVRdkdnWXhedHRcRGFdV0F+WUY=");
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense('${{ secrets.SYNCFUSION_LICENSE_KEY }}');
 
 var builder = WebApplication.CreateBuilder(args);
 
